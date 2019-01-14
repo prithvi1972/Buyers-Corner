@@ -1,0 +1,19 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#banner {
+	height: 310px;
+	background: #f0f0f0 url('../img/buyers.jpg') no-repeat;
+	background-size: 100% auto;
+}
+
+.heading {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 40px;
+	color: #fff;
+	padding: 100px 15px 0 15px;
+}
+
