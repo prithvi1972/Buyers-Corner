@@ -6,27 +6,62 @@ body {
 /* Banner Styling */
 
 #banner {
-	height: 310px;
+	min-height: 310px;
+	height: auto;
 	background: #f0f0f0 url('../img/buyers.jpg') no-repeat;
 	background-size: 100% auto;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 36px;
 }
 
 .heading {
-	padding: 125px 15px 0 15px;
 	color: #fff;
+	font-size: 38px;
+	padding-top: 60px;
 }
 
 .desc {
-	font-size: 52px;
+	font-size: 64px;
 	font-weight: bold;
 	color: #00f7fe;
 }
 
 .desc-red {
 	color: #ff5f5f;
+}
+
+@media (max-width: 480px) {
+	#banner {
+		min-height: 0;
+		background-size: auto 100%;
+		height: 220px;
+		padding-top: 60px;
+	}
+
+	.heading {
+		font-size: 16px;
+	}
+
+	.desc {
+		font-size: 34px;
+	}
+
+}
+
+@media (max-width: 768px) {
+	#banner {
+		background-size: 768px auto;
+		height: 220px;
+		padding-top: 60px;
+	}
+
+	.heading {
+		font-size: 22px;
+	}
+
+	.desc {
+		font-size: 34px;
+	}
 }
 
 /* Navbar Styling */
@@ -138,8 +173,9 @@ body {
 }
 
 .breadcrumb {
-	font-size: 14px;
+	font-size: 13px;
 	text-transform: uppercase;
+	padding: 5px 0;
 }
 
 .location {
@@ -151,18 +187,40 @@ body {
 	color: orange;
 }
 
-.location:not(:last-of-type):after {
+.location span {
+	color: #666;
+}
+
+.location a:after {
 	content: ' > ';
+	color: #000;
+}
+
+#main {
+	margin: 0 90px;
+	padding: 0 15px;
+}
+
+#main > ul {
+	padding: 5px;
+}
+
+#main h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 42px;
+	margin: 10px 0 30px 0;
 }
 
 .qna {
 	list-style: none;
+	margin: 0 0 30px 0;
 }
 
 .question {
 	font-family: 'Roboto', sans-serif;
 	color: black;
 	font-size: 20px;
+	margin: 10px 0 4px 0;
 }
 
 .question:before {
@@ -177,4 +235,14 @@ body {
 	font-family: 'Roboto', sans-serif;
 	color: #666;
 	padding-left: 20px;
+}
+
+.answer ul {
+	list-style: none;
+}
+
+.answer ul li:before {
+	content: ' • ';
+	color: black;
+	font-size: 18px;
 }
