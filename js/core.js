@@ -55,3 +55,5 @@ function Link(id,classes,href,content) {
 	this.ele = new Component("a",id,classes,content);
 	if(valid(this.href)) this.ele.href = this.href;
 }
+
+inherit(Component,Link);

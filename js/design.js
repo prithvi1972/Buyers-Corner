@@ -48,3 +48,23 @@ function Navigation(id, classes) {
 }
 
 inherit(Banner, Navigation);
+
+function Social(id, classes) {
+	this.socialLinks = [
+		{icon: ["fab","fa-facebook-f"], href: "#"},
+		{icon: ["fab","fa-twitter"], href: "#"},
+		{icon: ["fab","fa-google-plus"], href: "#"},
+		{icon: ["fab","fa-linkedin-in"], href: "#"},
+		{icon: ["fab","fa-youtube"], href: "#"},
+	];
+
+	this.ele = new Component("div",id,classes);
+
+	for(let i=0; i<this.socialLinks.length; i++) {
+		icon = new Component("i", "", this.socialLinks[i].icon);
+		a = new Link("", [], this.socialLinks[i].href, icon);
+		this.ele.append(a.ele);
+	}
+
+	return this.ele;
+}
